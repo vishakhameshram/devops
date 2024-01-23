@@ -10,5 +10,9 @@ public  static void justToCheckDemo() {
     system.debug('See its working');
     
 }
-   
+@AuraEnabled
+public  static void justToCheckDemo1() {
+    system.debug('See its working');
+    
+}
 }
