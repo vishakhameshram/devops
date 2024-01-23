@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="inline editiong table">
+        <div style="height:300px">
+            <lightning-datatable key-field="Id"
+            data={data}
+            columns={columns}
+            show-row-number-column
+            onsave={handleSave}
+            draft-values={saveDraftValues}
+            hide-checkbox-column="true"
+            >
+
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

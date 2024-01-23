@@ -1,0 +1,17 @@
+<template>
+    <!-- // this eg we are creating record only -->
+    <lightning-card title="Record Edit form demo by VIshakha">
+        <lightning-record-edit-form object-api-name={objectApiName}
+                                    onsuccess={handleSuccess} 
+                                    density="Compact">
+
+            <lightning-input-field field-name="Id" value={accountId}></lightning-input-field>
+            <lightning-input-field field-name={nameField} ></lightning-input-field>
+            <lightning-input-field field-name={phoneField} ></lightning-input-field>
+            <lightning-input-field field-name={webField} ></lightning-input-field>
+            <lightning-input-field field-name={descriptionField} ></lightning-input-field>
+
+            <lightning-button label="Submit" variant="brand" type="submit"> </lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

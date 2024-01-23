@@ -1,0 +1,20 @@
+<template>
+
+    <!-- example by me -->
+    my father name is :{parentName}
+    <div>
+        <!--  this is used for custom event -->
+        <lightning-input type="text" label="child name" onclick={clickHandlerChild}></lightning-input>
+
+<!-- hotel room child component -->
+        <template if:true={showRoomInfo}>
+            <div class="slds-p-around_medium">
+                <lightning-tile label={hotelRoomInfo.roomName} onclick={clickHandlerforTile}>
+                    <p class="slds-truncate">
+                        Room Capacity is {hotelRoomInfo.roomName}
+                    </p>
+                </lightning-tile>
+            </div>
+        </template>  
+    </div>
+</template>

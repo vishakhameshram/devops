@@ -1,0 +1,5 @@
+<aura:component>
+    <aura:attribute name="VFPageValue" type="String" default="default"></aura:attribute>
+    <h1>Heloo From Lightning Aura Component</h1>
+    <h2>{!v.VFPageValue}</h2>
+</aura:component>	

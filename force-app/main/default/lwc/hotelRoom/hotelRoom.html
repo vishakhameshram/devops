@@ -1,0 +1,15 @@
+<template>
+    <template if:true={showRoomInfo}>
+        <div class="slds-p-around_medium">
+            <lightning-tile label={hotelRoomInfo.roomName}>
+                <p class="slds-truncate">
+                    Room Capacity is {hotelRoomInfo.roomName}
+                </p>
+            </lightning-tile>
+            <!-- named Slot -->
+            <!-- <slot name="roomInfo"></slot> -->
+             <!-- Unnamed Slots -->
+        </div>
+
+    </template>
+</template>

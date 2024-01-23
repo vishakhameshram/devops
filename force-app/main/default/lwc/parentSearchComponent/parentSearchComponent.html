@@ -1,0 +1,59 @@
+<template>
+    <lightning-card title="Parent search component">
+<!-- Table 2 -->
+
+
+<lightning-layout multiple-rows="true">
+    <lightning-layout-item  flexibility="auto" padding="around-small">  
+        <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+            <strong> Approver Name</strong> 
+        </div>
+    </lightning-layout-item>
+    <lightning-layout-item size="8"> 
+        <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+            <strong>Select User</strong>
+        </div>
+        
+    </lightning-layout-item>
+</lightning-layout>
+
+
+<lightning-layout multiple-rows="true">
+    <lightning-layout-item  size="2" padding="around-small">  
+        <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+
+            Approver 1:  {UserName}
+        </div>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" padding="around-small"> 
+        <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+            <c-child-approver-component onmycustomevent={handleCustomEvent} >
+    
+            </c-child-approver-component>
+
+        </div>
+        
+    </lightning-layout-item>
+</lightning-layout>
+
+
+<lightning-layout>
+    <lightning-layout-item size="2" padding="around-small">
+        <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+            Approver 2: {approverName}
+        </div>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" padding="around-small"> 
+        <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+
+            <c-child-component-two onmycustomeventtwo={handleCustomEventtwo} >
+
+            </c-child-component-two>
+        </div>
+        
+
+    </lightning-layout-item>
+</lightning-layout>
+
+</lightning-card>
+</template>

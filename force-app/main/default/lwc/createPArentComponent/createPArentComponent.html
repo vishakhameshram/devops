@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="I am Parent component">
+        <div class="slds-p-around_medium">
+            <lightning-input label="name of parent" type="text" onclick={clickHandler}>
+
+            </lightning-input>
+            <!-- call child -->
+            <c-create-child-component parent-name={name} onchildname={clickParent}></c-create-child-component>
+            {chd}
+        </div>
+
+        <!-- hotel room component compositions -->
+        <lightning-layout>
+            <lightning-layout-item size="6" >
+                <div class="slds-p-around_medium">
+                <template for:each={hotelRoomInfo} for:item="room">
+                    <li key={room.roomName}>
+                         <!-- compositions can be achieve by slot name slots and unnamed slots  -->
+                        <!-- <c-hotel-room hotel-room-info={room} show-room-info></c-hotel-room> -->
+                        <c-create-child-component  show-room-info hotel-room-info={room} ontileclick={ontileclickHandler}>
+                        </c-create-child-component>
+
+                    </li>
+                 </template> 
+                 </div>
+                </lightning-layout-item>
+                 <lightning-layout-item size="6" >
+                    <h3>You Have selected ::: 
+                        <b>{selectedHotelRoom.roomName} </b>
+                        <b>{selectedHotelRoom.roomCapacity} </b>
+                    </h3>
+                 
+                </lightning-layout-item> 
+            </div>
+            
+        </lightning-layout>
+
+    </lightning-card>
+</template>

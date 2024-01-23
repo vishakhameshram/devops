@@ -1,0 +1,24 @@
+<template>
+    
+        <lightning-button variant="brand" label={buttonLable} onclick={handleClick}> </lightning-button>
+        <lightning-card title="data table row selection">
+            
+
+            <template if:true={isDatatableVisble}>
+                <lightning-input type="search" label="search contact Name" class="slds-p-around_medium" 
+                                    onchange={handleChange} value={searchKey}>
+
+                </lightning-input>
+                <lightning-datatable
+                                    key-field="Id"
+                                    data={conData}
+                                    columns={column}
+                                    onrowselection={handleSelectedRow}
+                >
+                </lightning-datatable>
+       
+            </template>
+        
+    </lightning-card>
+    <!-- <lightning-datatable></lightning-datatable> -->
+</template>

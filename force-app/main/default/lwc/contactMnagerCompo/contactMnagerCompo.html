@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Contact records details">
+        <lightning-input type="number" label="Enter number to display records" onchange={hanldechange}>
+
+        </lightning-input>
+        <lightning-button label="Get Contatct" onclick={getConDetails}></lightning-button>
+
+        <template if:true={responseReceived}>
+                <template for:each={contacts} for:item="cc"> 
+                        <div key={cc.id}>
+                            <lightning-tile label={cc.LastName} type="media">
+                                <lightning-icon slot="media" icon-name="standard:contact"></lightning-icon>
+                                <p class="slds-truncate" title="Contact Phone">{cc.Phone}</p>
+                            </lightning-tile>
+                        </div>
+                </template>
+
+        </template>
+
+    </lightning-card>
+</template>

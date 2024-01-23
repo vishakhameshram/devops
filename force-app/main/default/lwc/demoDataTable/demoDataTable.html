@@ -1,0 +1,38 @@
+<template>
+    <Lightning-card>
+        <div class="slds-m-around_medium">
+                <lightning-input type="text" 
+                                 label="Expenditure Amount" 
+                                 onkeyup={searchAmount}
+                                >
+                </lightning-input>
+            </div>         
+            <div class="slds-m-around_medium slds-m-bottom_x-small">
+                <lightning-button 
+                                  label="Submit"
+                                  onclick={handleFilter}
+                                  variant="brand">
+                </lightning-button>
+            </div>    
+    <table>
+        <thead>
+            <tr>
+                <template for:each={columns} for:item="heading"> 
+                    <th key={heading}>{heading}</th>
+                </template>  
+            </tr>
+        </thead>
+        <tbody>
+
+            <template for:each={filteredData} for:item="datas"> 
+                <tr key={datas.ApproverName}>
+
+                    <td>{datas.ApproverName}</td>
+                    <td>{datas.ApprovalLimit}</td>
+                </tr>
+            </template>
+            
+        </tbody>
+    </table>
+</Lightning-card>
+</template>

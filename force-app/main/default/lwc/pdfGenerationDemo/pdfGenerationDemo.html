@@ -1,0 +1,18 @@
+<template>
+    <div class="container">
+        <div>
+            <img src={imageUrl} style="height:40px; width:150px"/>
+            <div>
+                <div>Invoice #: {invoiceData.invoiceNo}</div>
+                <div>Created #: {invoiceData.invoiceCreated}</div>
+                <div>Due #: {invoiceData.invoiceDue}</div>
+            </div>
+        </div>
+    </div>
+    
+        <div>
+            <div> {invoiceData.companyName}</div>
+            <div> {invoiceData.address1}</div>
+            <div> {invoiceData.address2}</div>
+        </div>
+</template>

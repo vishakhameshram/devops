@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title={cardTitle}>
+        <Lightning-input type="number" onchange={handlenumberOneChange} label="number1"></Lightning-input>
+        <Lightning-input type="number" onchange={handlenumberTwoChange} label="number2"></Lightning-input>
+        <lightning-button label="Multiply" onclick={mult}></lightning-button>
+        <lightning-button label="Square" onclick={Square}></lightning-button>
+            <div class="slds-p-around_medium">
+                <p>
+
+                    Multiplication is : {multRes}
+                </p>
+                <p>
+
+                    Sqauer resiult is : {squareRes}
+                </p>
+            </div>
+        
+    </lightning-card>
+</template>
